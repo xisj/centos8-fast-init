@@ -8,7 +8,7 @@ dnf makecache &&\
 dnf update -y
 
 git clone https://github.com/terry2010/centos7-fast-init.git 
-cd centos7-fast-init/
+cd centos8-fast-init/
 screen sh docker/install.sh
 
 
