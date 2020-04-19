@@ -74,9 +74,14 @@ docker run -d -p 9999:9999 -p 9999:9999/udp --restart=always --name ss-go -v /da
 
 
 #打开防火墙端口
-#firewall-cmd --zone=public --add-port=9999/tcp --permanent  
-#firewall-cmd --zone=public --add-port=9999/udp --permanent  
-#firewall-cmd --reload
+firewall-cmd --zone=public --add-port=80/tcp --permanent  
+firewall-cmd --zone=public --add-port=80/udp --permanent  
+
+firewall-cmd --zone=public --add-port=9999/tcp --permanent  
+firewall-cmd --zone=public --add-port=9999/udp --permanent  
+
+firewall-cmd --reload
+firewall-cmd --zone=public --list-ports
 
 #启用bbr
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
