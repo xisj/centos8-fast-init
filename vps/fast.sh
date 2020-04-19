@@ -28,6 +28,7 @@ docker run -d -p 9999:9999 -p 9999:9999/udp --restart=always --name ss-go -v /da
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
+ip a
 reboot
 
 #查看bbr是否生效
