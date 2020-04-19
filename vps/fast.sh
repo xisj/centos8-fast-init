@@ -7,8 +7,8 @@ dnf install -y epel-release &&\
 dnf makecache &&\
 screen dnf update -y
 
-git clone https://github.com/xisj/centos7-fast-init.git 
-cd centos7-fast-init/
+git clone https://github.com/xisj/centos8-fast-init.git 
+cd centos8-fast-init/
 screen sh docker/install.sh
 
 mv ./data1 /
