@@ -7,7 +7,7 @@ dnf install -y epel-release &&\
 dnf makecache &&\
 dnf update -y
 
-git clone https://github.com/terry2010/centos8-fast-init.git 
+git clone https://github.com/xisj/centos8-fast-init.git 
 cd centos8-fast-init/
 screen sh docker/install.sh
 
