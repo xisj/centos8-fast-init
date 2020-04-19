@@ -1,6 +1,16 @@
 # centos8-fast-init
 最小化安装centos8 之后， 快速初始化环境， 使新机器最短时间可以上线作为开发机/生产机使用
 
+## 快速初始化服务器
+```
+yum install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo &&\
+dnf install -y epel-release &&\
+dnf makecache &&\
+screen dnf update -y
+
+```
+
 
 ## 更换阿里源
 ```
