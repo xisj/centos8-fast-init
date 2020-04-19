@@ -6,7 +6,7 @@
 
 ```
 yum install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
-wget "https://raw.githubusercontent.com/terry2010/centos8-fast-init/master/vps/fast.sh" &&\
+wget "https://raw.githubusercontent.com/xisj/centos8-fast-init/master/vps/fast.sh" &&\
 screen sh fast.sh 
 
 ```
@@ -16,7 +16,7 @@ screen sh fast.sh
 #### 需要先修改 vps.sh  
 ```
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
-git clone https://github.com/terry2010/centos8-fast-init.git &&\
+git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
 screen  scp  root@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
