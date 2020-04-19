@@ -17,7 +17,7 @@ screen sh fast.sh
 ```
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
 git clone https://github.com/terry2010/centos8-fast-init.git &&\
-vim lnmp.sh &&\
+vim centos8-fast-init/vps/lnmp.sh &&\
 screen  scp  root@zhuikan.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
 tar -xzf data1.tar.gz &&\
