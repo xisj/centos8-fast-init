@@ -71,6 +71,7 @@ docker restart my-php
 #docker run -d -p 9000:9000 -p 9000:9000/udp --name ss-libev -v /data1/conf/ss:/etc/shadowsocks-libev teddysun/shadowsocks-libev
 docker run -d -p 9999:9999 -p 9999:9999/udp --restart=always --name ss-go -v /data1/conf/ss:/etc/shadowsocks-go teddysun/shadowsocks-go
 
+docker run -d --privileged -p 500:500/udp -p 4500:4500/udp --name l2tp --restart=always --env-file /data1/conf/l2tp/l2tp.env -v /lib/modules:/lib/modules teddysun/l2tp
 
 
 #打开防火墙端口
