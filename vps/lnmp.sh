@@ -1,8 +1,8 @@
 cat /proc/cpuinfo
 cat /etc/redhat-release 
 
-dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
 dnf install -y epel-release &&\
+dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
 dnf makecache &&\
 dnf update -y
 
