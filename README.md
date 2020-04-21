@@ -56,11 +56,30 @@ dnf makecache
 screen dnf update -y
 ```
 ------
+
+
+
+
+## 新上架机器后， 启用网卡
+```
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+```
+
+#修改 ONBOOT=no  为 ONBOOT=yes
+
+#重启网络服务
+```
+service network restart
+```
+#查看ip
+```
+ip addr
+```
+
 > 可选操作：
 
 ### 更新时区
 ```
-dnf -y install chrony
 timedatectl set-timezone "Asia/Shanghai"
 
 ```
