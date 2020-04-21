@@ -12,5 +12,5 @@ echo '{
   "registry-mirrors": ["https://md4nbj2f.mirror.aliyuncs.com"]
 }' > /etc/docker/daemon.json
 
-systemctl start docker
+systemctl restart docker
 systemctl enable docker
