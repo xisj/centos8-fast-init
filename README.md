@@ -29,19 +29,23 @@ screen sh lnmp.sh
 
 
 ## 更换阿里源
-```
-curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
-```
+ 
 
 ## 替换yum源为ali源
-
+#centos8 对镜像的选择做的不错，一般情况下无需替换
 #备份
 ```
-mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-```
-#替换
-```
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+cd /etc/yum.repos.d
+#备份
+cp CentOS-Base.repo CentOS-Base.repo.bak
+cp CentOS-AppStream.repo CentOS-AppStream.repo.bak
+cp CentOS-Extras.repo CentOS-Extras.repo.bak
+
+sed -i 's/mirrorlist=/#mirrorlist=/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
+sed -i 's/#baseurl=/baseurl=/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
+sed -i 's/http:\/\/mirror.centos.org/https:\/\/mirrors.aliyun.com/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
+
+
 ```
 #下载fedora的epel仓库
 ```
