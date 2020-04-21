@@ -2,7 +2,6 @@ cat /proc/cpuinfo
 cat /etc/redhat-release 
 
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
-curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo &&\
 dnf install -y epel-release &&\
 dnf makecache &&\
 dnf update -y
@@ -12,7 +11,7 @@ cd centos8-fast-init/
 screen sh docker/install.sh
 
 
-#mv ./data1 /
+mv ./data1 /
 
 
 docker run --name my-nginx -d --restart=always --network=host   -v /data1/conf/nginx:/etc/nginx:ro -v /data1/htdocs:/htdocs:ro  -v /data1/log/nginx:/logs nginx
