@@ -5,3 +5,11 @@ dnf install -y docker-ce docker-ce-cli
 systemctl start docker
 systemctl enable docker
 docker version
+
+#更换为阿里镜像
+echo '{
+  "registry-mirrors": ["https://md4nbj2f.mirror.aliyuncs.com"]
+}' > /etc/docker/daemon.json
+
+systemctl start docker
+systemctl enable docker
