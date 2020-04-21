@@ -2,7 +2,6 @@ cat /proc/cpuinfo
 cat /etc/redhat-release 
 
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
-curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo &&\
 dnf install -y epel-release &&\
 dnf makecache &&\
 screen dnf update -y
