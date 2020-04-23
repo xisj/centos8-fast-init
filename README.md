@@ -89,3 +89,7 @@ ip addr
 timedatectl set-timezone "Asia/Shanghai"
 
 ```
+
+# 手工安装gcc
+
+https://sourceforge.net/projects/mingw-w64/files/
