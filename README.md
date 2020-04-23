@@ -6,7 +6,7 @@
 
 ```
 dnf install -y epel-release
-dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
+dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
 wget "https://raw.githubusercontent.com/xisj/centos8-fast-init/master/vps/fast.sh" &&\
 screen sh fast.sh 
 
@@ -17,7 +17,7 @@ screen sh fast.sh
 #### 需要先修改 vps.sh  
 ```
 dnf install -y epel-release
-dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
+dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
 git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
 screen  scp  root@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
