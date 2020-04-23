@@ -90,6 +90,11 @@ timedatectl set-timezone "Asia/Shanghai"
 
 ```
 
-# 手工安装gcc
+### 手工安装gcc
 
 https://sourceforge.net/projects/mingw-w64/files/
+
+### 修改环境变量
+
+<img src='https://raw.githubusercontent.com/xisj/centos8-fast-init/master/gcc-install.png' alt='desc demo' />
+
