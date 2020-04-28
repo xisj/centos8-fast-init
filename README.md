@@ -16,8 +16,8 @@ screen sh fast.sh
 ## 快速上线
 #### 需要先修改 vps.sh  
 ```
-dnf install -y epel-release  dnf-plugins-core
-dnf config-manager --set-enabled PowerTools
+dnf install -y epel-release  dnf-plugins-core &&\
+dnf config-manager --set-enabled PowerTools &&\
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
 git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
