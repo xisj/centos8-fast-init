@@ -38,15 +38,13 @@ screen sh lnmp.sh
 #centos8 对镜像的选择做的不错，一般情况下无需替换
 #备份
 ```
-cd /etc/yum.repos.d
+cd /etc/yum.repos.d 
 #备份
-cp CentOS-Base.repo CentOS-Base.repo.bak
-cp CentOS-AppStream.repo CentOS-AppStream.repo.bak
-cp CentOS-Extras.repo CentOS-Extras.repo.bak
+cp -R /etc/yum.repos.d /etc/bak.yum.repos.d
 
-sed -i 's/mirrorlist=/#mirrorlist=/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
-sed -i 's/#baseurl=/baseurl=/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
-sed -i 's/http:\/\/mirror.centos.org/https:\/\/mirrors.aliyun.com/g' CentOS-Base.repo CentOS-AppStream.repo CentOS-Extras.repo
+sed -i 's/mirrorlist=/#mirrorlist=/g' CentOS-*.repo 
+sed -i 's/#baseurl=/baseurl=/g' CentOS-*.repo 
+sed -i 's/http:\/\/mirror.centos.org/https:\/\/mirrors.aliyun.com/g' CentOS-*.repo  
 
 
 ```
