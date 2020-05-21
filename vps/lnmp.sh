@@ -80,6 +80,9 @@ firewall-cmd --zone=public --add-port=80/udp --permanent
 firewall-cmd --zone=public --add-port=9999/tcp --permanent  
 firewall-cmd --zone=public --add-port=9999/udp --permanent  
 
+firewall-cmd --zone=public --add-port=500/udp --permanent  
+firewall-cmd --zone=public --add-port=4500/udp --permanent  
+
 firewall-cmd --reload
 firewall-cmd --zone=public --list-ports
 
