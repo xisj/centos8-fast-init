@@ -24,8 +24,17 @@ vim centos8-fast-init/vps/lnmp.sh &&\
 screen  scp  root@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
 tar -xzf data1.tar.gz &&\
-cd /root/centos8-fast-init/vps/ 
+cd /root/centos8-fast-init/vps/ &&\
 screen sh lnmp.sh 
+
+
+```
+
+
+### 禁止穷举ssh密码
+```
+cd centos9-fast-init/vps/
+screen sh ban.sh
 
 
 ```
