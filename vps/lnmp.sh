@@ -8,7 +8,7 @@ dnf update -y
 
 git clone https://github.com/xisj/centos8-fast-init.git 
 cd centos8-fast-init/
-screen sh docker/install.sh
+sh docker/install.sh
 
 
 mv ./data1 /
