@@ -97,6 +97,11 @@ ip addr
 timedatectl set-timezone "Asia/Shanghai"
 
 ```
+### 手动个ssh开放更多端口
+```
+
+semanage port -a -t ssh_port_t -p tcp 80
+```
 
 ### 手工安装gcc
 
