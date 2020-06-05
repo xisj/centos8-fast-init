@@ -4,11 +4,11 @@ cat /etc/redhat-release
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils &&\
 dnf install -y epel-release &&\
 dnf makecache &&\
-screen dnf update -y
+dnf update -y
 
 git clone https://github.com/xisj/centos8-fast-init.git 
 cd centos8-fast-init/
-screen sh docker/install.sh
+sh docker/install.sh
 
 mv ./data1 /
 
