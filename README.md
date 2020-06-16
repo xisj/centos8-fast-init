@@ -23,7 +23,7 @@ git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
 scp  root@xxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
-tar -xzf /data1.tar.gz /data1 &&\
+tar -xzf /data1.tar.gz / &&\
 cd /root/centos8-fast-init/vps/ &&\
 sh lnmp.sh 
 
