@@ -21,9 +21,9 @@ dnf config-manager --set-enabled PowerTools &&\
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
 git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
-screen  scp  root@.com:/data1.tar.gz /data1.tar.gz &&\
+scp  root@xxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
-tar -xzf data1.tar.gz &&\
+tar -xzf /data1.tar.gz /data1 &&\
 cd /root/centos8-fast-init/vps/ &&\
 sh lnmp.sh 
 
