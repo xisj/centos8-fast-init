@@ -27,6 +27,8 @@ docker exec -t my-php bash -c "echo \"extension=redis.so\" >> /usr/local/etc/php
 #安装yaf
 #docker exec -t my-php bash -c "yes '' |pecl install yaf"
 #docker exec -t my-php bash -c "echo \"extension=yaf.so\" >> /usr/local/etc/php/php.ini"
+#安装mysqli
+docker exec -t my-php bash -c "/usr/local/bin/docker-php-ext-install mysqli"
 
 #安装gd
 docker exec -t my-php bash -c "apt-get update -y \
