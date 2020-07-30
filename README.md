@@ -36,7 +36,13 @@ sh lnmp.sh
 cd centos9-fast-init/vps/
 screen sh ban.sh
 
-
+```
+#### 如果被大量穷举， 可以使用正经的fail2ban
+```
+dnf install fail2ban
+systemctl start fail2ban
+systemctl enable fail2ban
+fail2ban-client ping
 ```
 
 
