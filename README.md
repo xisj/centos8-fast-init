@@ -117,3 +117,14 @@ https://sourceforge.net/projects/mingw-w64/files/
 
 <img src='https://raw.githubusercontent.com/xisj/centos8-fast-init/master/gcc-install.png' alt='desc demo' />
 
+
+### 安装ffmpeg
+--- ffmpeg 推荐安装ffmpeg* ，这样不会因为缺少库出现奇怪问题
+```
+dnf -y install https://download.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf -y localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+dnf -y install --nogpgcheck https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
+dnf -y install http://rpmfind.net/linux/epel/7/x86_64/Packages/s/SDL2-2.0.10-1.el7.x86_64.rpm
+dnf install -y ffmpeg*
+
+```
