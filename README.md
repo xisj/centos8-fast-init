@@ -21,7 +21,7 @@ dnf config-manager --set-enabled PowerTools &&\
 dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
 git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
-scp  root@xxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
+scp  root@xxxxxxxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
 cd /  &&\
 tar -xzf /data1.tar.gz / &&\
 cd /root/centos8-fast-init/vps/ &&\
@@ -43,6 +43,20 @@ dnf install fail2ban
 systemctl start fail2ban
 systemctl enable fail2ban
 fail2ban-client ping
+fail2ban-client status
+```
+
+修改   /etc/fail2ban/jail.conf 
+
+```
+[ssh-iptables]
+enabled = true
+filter = sshd
+action = iptables[name=SSH, port=22, protocol=tcp]
+#sendmail-whois[name=SSH, dest=your@email.com, sender=fail2ban@email.com]
+logpath = /var/log/secure
+maxretry = 3
+bantime = 370
 ```
 
 
@@ -106,7 +120,7 @@ timedatectl set-timezone "Asia/Shanghai"
 ### 手动个ssh开放更多端口
 ```
 
-semanage port -a -t ssh_port_t -p tcp 80
+semanage port -m -t ssh_port_t -p tcp 80
 ```
 
 ### 手工安装gcc
