@@ -66,7 +66,7 @@ docker restart my-php
 #只有当php容器挂载目录为可写的时候才需要这么做
 #docker exec -t my-php bash -c "chown -R www-data:www-data /htdocs/"
 
-
+#docker run --name my-mysql -d --network=host -v /data1/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=weibo.com mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
 
 #docker run -d -p 9000:9000 -p 9000:9000/udp --name ss-libev -v /data1/conf/ss:/etc/shadowsocks-libev teddysun/shadowsocks-libev
