@@ -14,7 +14,7 @@ sh docker/install.sh
 mv ./data1 /
 
 
-docker run --name my-nginx -d --restart=always --network=host    -e TZ="Asia/Shanghai" -v /data1/conf/nginx:/etc/nginx:ro -v /data1/htdocs:/htdocs:ro  -v /data1/log/nginx:/logs -v /data1/cert/:/cert nginx
+docker run --name my-nginx -d --restart=always --network=host    -e TZ="Asia/Shanghai" -v /data1/conf/nginx:/etc/nginx:ro -v /data1/htdocs:/htdocs:ro  -v /data1/log/nginx:/logs -v /data1/privkey/:/privkey nginx
 
 docker run --name my-php -d --restart=always --network=host -v /data1/htdocs:/htdocs:ro php:7.3-fpm
 
