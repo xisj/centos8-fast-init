@@ -29,7 +29,11 @@ sh lnmp.sh
 
 
 ```
-
+### 缓解sshd长时间连接后自动断开的问题
+```
+ClientAliveInterval 60
+ClientAliveCountMax 60
+```
 
 ### 禁止穷举ssh密码
 ```
