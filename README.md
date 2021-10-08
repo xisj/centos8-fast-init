@@ -6,7 +6,7 @@
 
 ```
 dnf install -y epel-release  dnf-plugins-core
-dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
+dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar psmisc  &&\
 wget "https://raw.githubusercontent.com/xisj/centos8-fast-init/master/vps/fast.sh" &&\
 screen sh fast.sh 
 
@@ -18,7 +18,7 @@ screen sh fast.sh
 ```
 dnf install -y epel-release  dnf-plugins-core &&\
 dnf config-manager --set-enabled PowerTools &&\
-dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar &&\
+dnf install -y wget git vim lrzsz screen net-tools telnet iftop bind-utils tar psmisc  &&\
 git clone https://github.com/xisj/centos8-fast-init.git &&\
 vim centos8-fast-init/vps/lnmp.sh &&\
 scp  root@xxxxxxxxxxxxx.com:/data1.tar.gz /data1.tar.gz &&\
