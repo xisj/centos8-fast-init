@@ -152,3 +152,9 @@ dnf install -y ffmpeg*
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
+
+### 安装秘钥实现免密登陆
+```
+ssh-keygen -t  rsa   #本地生成秘钥， 若已有可省略
+ssh-copy-id -i ~/.ssh/id_rsa.pub  devuser@xisj.com  #将本地秘钥拷贝到服务器
+```
