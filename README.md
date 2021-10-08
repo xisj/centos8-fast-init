@@ -121,6 +121,12 @@ ip addr
 timedatectl set-timezone "Asia/Shanghai"
 
 ```
+
+### docker内部更新时区
+```
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+```
+
 ### 手动个ssh开放更多端口
 ```
 
