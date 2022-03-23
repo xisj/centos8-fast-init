@@ -164,3 +164,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 ssh-keygen -t  rsa   #本地生成秘钥， 若已有可省略
 ssh-copy-id -i ~/.ssh/id_rsa.pub  devuser@xisj.com  #将本地秘钥拷贝到服务器
 ```
+
+### 利用ssh 实现内外网联通
+ssh -D :7777 -N admin@example.com
+
