@@ -1,6 +1,7 @@
 # centos8-fast-init
 最小化安装centos8 之后， 快速初始化环境， 使新机器最短时间可以上线作为开发机/生产机使用
 
+# 停止维护，最新版本为  https://github.com/xisj/centos9-fast-init
 
 ## 一键安装
 
